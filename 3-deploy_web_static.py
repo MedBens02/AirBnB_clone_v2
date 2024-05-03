@@ -13,7 +13,6 @@ env.hosts = ['100.25.24.20', '34.227.91.92']
 
 def do_pack():
     """Makes an archive from web_static folder"""
-
     local("mkdir -p versions")
 
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
@@ -46,7 +45,7 @@ def do_deploy(archive_path):
         run('rm -rf /data/web_static/current')
         run('ln -s {}{}/ /data/web_static/current'.format(release_dir, no_ext))
         return True
-    except Exception as e:
+    except Exception as er:
         return False
 
 
