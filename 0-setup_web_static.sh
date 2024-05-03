@@ -31,7 +31,7 @@ printf %s "server {
     listen [::]:80 default_server;
     root   /etc/nginx/html;
     index  index.html index.htm;
-    add_header X-Served-By $hostname;
+    add_header X-Served-By $HOSTNAME;
 
     location /redirect_me {
         return 301 https://github.com/MedBens02;
