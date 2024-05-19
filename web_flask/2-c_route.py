@@ -3,8 +3,10 @@
 Starts a Flask web application
     Listen : on 0.0.0.0 port 5000
     Routes :
-        /: display "Hello HBNB!"
-        /hbnb: display "HBNB"
+        /              : display "Hello HBNB!"
+        /hbnb          : display "HBNB"
+        /c/<text>      : display "C ", followed by the value of the
+                    text variable (replace underscores with spaces)
 """
 
 from flask import Flask
